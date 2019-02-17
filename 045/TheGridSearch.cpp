@@ -5,32 +5,29 @@ using namespace std;
 vector<string> split_string(string);
 
 bool IsValidGrid( int x, int y, vector<string> dest, vector<string> src ) {
-    bool result = true;
      for( int j = 1; j < src.size(); ++j ) {
          ++y;
         if ( dest[y].compare( x, src[j].size(), src[j] ) != 0 ) {
-            result = false;
+            return false;
         }
     }
-    return result;
+    return true;
 }
 // Complete the gridSearch function below.
 string gridSearch(vector<string> G, vector<string> P) {
 
     int x, y;
-    bool corrected = false;
     for( int i = 0; i < G.size(); ++i ) {
-        ssize_t pos;
-        if( ( pos = G[i].find( P[0] ) ) != std::string::npos ) {
+        ssize_t pos = G[i].find( P[0] );
+        while( pos != std::string::npos  ) {
             y = i, x = pos;
-         
             if ( IsValidGrid ( x, y, G, P ) ) {
-                corrected = true;
-                break;
+                return "YES";
             }
+            pos = G[i].find( P[0], pos + 1 );
         }
     }
-    return corrected ? "YES" : "NO";
+    return "NO";
 }
 
 int main()
