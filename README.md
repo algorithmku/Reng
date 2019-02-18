@@ -4,9 +4,9 @@
 | Number | Problem | Difficulty | Language |
 |:------:|:------:|:------:|:------:|
 | 45-2  |  Missing Numbers            | easy  |   |
-| 45-1  |  The Grid Search            | medium |   |
-| 44-2  |  Prime Dates                | medium |   |
-| 44-1  |  Two Strings                | easy   |   |
+| 45-1  |  The Grid Search            | medium |  C++ |
+| 44-2  |  Prime Dates                | medium | JAVA  |
+| 44-1  |  Two Strings                | easy   |  JAVA |
 | 43-2  |  Largest permutation        | easy   |   |
 | 43-1  |  Greedy florist             | medium |   |
 | 42-2  |  Mars exploration           | easy   | JAVA  |
