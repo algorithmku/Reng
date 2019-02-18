@@ -3,6 +3,7 @@
 
 | Number | Problem | Difficulty | Language |
 |:------:|:------:|:------:|:------:|
+| 46-1  |  Grid Challenge             | easy  |   |
 | 45-2  |  Missing Numbers            | easy  |   |
 | 45-1  |  The Grid Search            | medium |  C++ |
 | 44-2  |  Prime Dates                | medium | JAVA  |
