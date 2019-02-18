@@ -10,40 +10,13 @@ public class Solution {
 
     // Complete the twoStrings function below.
     static String twoStrings(String s1, String s2) {
-        boolean result = false;
-        String s1_no_repeated = "";
-        String s2_no_repeated = "";
-        for( int i = 0; i < s1.length(); ++i )
-        {
-            if ( !s1_no_repeated.contains( String.valueOf( s1.charAt(i) ) ) )
-            {
-                s1_no_repeated += String.valueOf( s1.charAt(i) );
+        String letters = "abcdefghijklmnopqrstuvwxyz";
+        for( Character c : letters.toCharArray() ) {
+            if ( s1.indexOf( c ) != -1 && s2.indexOf( c ) != -1 ) {
+                return "YES";
             }
         }
-        for( int i = 0; i < s2.length(); ++i )
-        {
-            if ( !s2_no_repeated.contains( String.valueOf( s2.charAt(i) ) ) )
-            {
-                s2_no_repeated += String.valueOf( s2.charAt(i) );
-            }
-        }
-        /*
-        for( int i = 0; i < s1.length(); ++i )
-        {
-            if ( s2.contains( String.valueOf( s1.charAt(i) ) ) )
-            {
-                result = true;
-                break;
-            }
-        }*/
-        for ( Character c : s1.toCharArray() ){
-           if ( -1 != s2.indexOf( c ) ) {
-               result = true;
-               break;
-           } 
-        }
-        
-        return result ? "YES" : "NO";
+        return "NO";
     }
 
     private static final Scanner scanner = new Scanner(System.in);
